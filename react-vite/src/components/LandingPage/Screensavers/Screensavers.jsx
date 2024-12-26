@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { cyclingImages } from '../../../data';
+import data from '../../../data';
 import './Screensavers.css';
 
 export default function Screensavers() {
+  const { cyclingImages } = data;
   const [imageIndex, setImageIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(
@@ -10,7 +11,7 @@ export default function Screensavers() {
       5000
     );
     return () => clearInterval(interval);
-  }, []);
+  }, [cyclingImages]);
 
   return <img className='screensaver' src={cyclingImages[imageIndex]} />;
 }
