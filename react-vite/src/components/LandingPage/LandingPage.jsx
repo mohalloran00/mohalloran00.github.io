@@ -1,9 +1,10 @@
 import AboutMe from './AboutMe';
+import Screensavers from './Screensavers';
 
 export default function LandingPage() {
   return (
     <>
-      <p>cyling images</p>
+      <Screensavers />
       <p>--</p>
       <AboutMe />
       <p>--</p>
