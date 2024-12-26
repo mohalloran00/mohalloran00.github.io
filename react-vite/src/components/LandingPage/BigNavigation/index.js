@@ -1,2 +1,2 @@
-import Blurb from './Blurb.jsx';
-export default Blurb;
+import BigNavigation from './BigNavigation';
+export default BigNavigation;
