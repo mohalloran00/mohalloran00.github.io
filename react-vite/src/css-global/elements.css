@@ -1,0 +1,7 @@
+p {
+  margin-bottom: 0.8em;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
