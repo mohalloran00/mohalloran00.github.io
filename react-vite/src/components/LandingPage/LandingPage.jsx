@@ -1,4 +1,4 @@
-function App() {
+export default function LandingPage() {
   return (
     <>
       <p>navigation bar</p>
@@ -8,5 +8,3 @@ function App() {
     </>
   );
 }
-
-export default App;
