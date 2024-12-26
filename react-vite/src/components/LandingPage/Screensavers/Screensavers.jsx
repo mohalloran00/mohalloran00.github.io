@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { cyclingImages } from '../../../data.json';
+import { cyclingImages } from '../../../data';
 import './Screensavers.css';
 
 export default function Screensavers() {
