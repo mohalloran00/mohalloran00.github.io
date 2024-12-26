@@ -1,4 +1,5 @@
-import data from '../../data';
+import data from '../../../data';
+import './AboutMe.css';
 
 export default function AboutMe() {
   const { aboutMe } = data;
