@@ -1,13 +1,15 @@
 import AboutMe from './AboutMe';
 import Screensavers from './Screensavers';
+import Blurb from './BigNavigation';
 
 export default function LandingPage() {
   return (
     <>
       <Screensavers />
       <AboutMe />
-      <p>--</p>
-      <p>Sections: research, outreach, mentoring, contact</p>
+      {['research', 'outreach', 'mentoring', 'contact'].map(idk => (
+        <Blurb />
+      ))}
     </>
   );
 }
