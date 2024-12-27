@@ -18,7 +18,9 @@ export default function Layout() {
           ))}
         </div>
       </div>
-      <Outlet />
+      <main id='page'>
+        <Outlet />
+      </main>
     </>
   );
 }
