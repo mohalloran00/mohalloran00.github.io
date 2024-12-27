@@ -8,7 +8,7 @@ export default function Screensavers() {
   useEffect(() => {
     const interval = setInterval(
       () => setImageIndex(prev => (prev + 1) % cyclingImages.length),
-      5000
+      10_000
     );
     return () => clearInterval(interval);
   }, [cyclingImages]);
