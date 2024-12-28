@@ -1,4 +1,6 @@
 :root {
   --rock: rgb(190, 208, 217);
+  --river: rgb(183, 228, 247);
+  --water: rgb(2, 172, 238);
   --max-width: 600px;
 }

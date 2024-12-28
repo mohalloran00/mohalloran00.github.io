@@ -1,3 +1,5 @@
+@import url(../../../css-global/vars.css);
+
 @media screen {
   .big-nav {
     margin: 25px 0;
@@ -7,10 +9,15 @@
   }
 
   .big-navbox {
-    border: 1px solid black;
     padding: 10px;
     width: 300px;
     margin: auto;
+    border-radius: 5px;
+  }
+
+  .big-navbox:hover {
+    color: inherit;
+    background-color: var(--rock);
   }
 
   .bnb-title {
