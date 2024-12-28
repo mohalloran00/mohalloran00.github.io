@@ -1,33 +1,38 @@
 @import url(../css-global/vars.css);
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--rock);
-  padding: 5px 7px;
-  margin-bottom: 10px;
-}
+@media screen {
+  /* container for navigation bar */
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--rock);
+    padding: 5px 7px;
+    margin-bottom: 10px;
+  }
 
-#navbar > div:first-child {
-  font-weight: bold;
-}
+  /* container for site name */
+  #navbar > div:first-child {
+    font-weight: bold;
+  }
 
-#navbar > div:last-child {
-  display: flex;
-  gap: 5px;
-}
+  /* container for navigation links */
+  #navbar > div:last-child {
+    display: flex;
+    gap: 5px;
+  }
 
-#navbar > div:last-child a {
-  font-size: 0.9em;
-}
+  /* navigation links */
+  #navbar > div:last-child a {
+    font-size: 0.9em;
+  }
 
-#navbar a.active {
-  font-weight: bold;
-}
+  #navbar a.active {
+    font-weight: bold;
+  }
 
-@media screen and (min-width: 600px) {
+  /* container for non-navbar, cap page width for desktop view */
   #page {
-    max-width: 600px;
+    max-width: var(--max-width);
     margin: auto;
   }
 }
