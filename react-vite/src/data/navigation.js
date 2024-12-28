@@ -25,7 +25,7 @@ const navigation = [
     URL: '/mentoring',
     icon: faChalkboardTeacher,
     blurb:
-      'Dui condimentum inceptos quam hendrerit egestas sit. Curabitur quis mattis iaculis cursus phasellus suscipit taciti mauris. Sociosqu augue platea elementum ultrices cubilia semper cursus aliquet.',
+      'Dui condimentum inceptos quam hendrerit egestas sit. Curabitur quis mattis iaculis cursus phasellus suscipit taciti mauris.',
   },
   {
     name: 'Contact',
