@@ -1,6 +1,5 @@
 import {
   faMicroscope,
-  faPeopleGroup,
   faEnvelope,
   faChalkboardTeacher,
   faComments,

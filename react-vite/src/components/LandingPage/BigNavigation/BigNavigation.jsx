@@ -6,8 +6,8 @@ export default function BigNavigation() {
   const { navigation } = data;
   return (
     <div className='big-nav'>
-      {navigation.map(page => (
-        <NavBox page={page} />
+      {navigation.map((page, i) => (
+        <NavBox page={page} key={i} />
       ))}
     </div>
   );
