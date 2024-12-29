@@ -15,6 +15,12 @@
 }
 
 @media screen and (min-width: 600px) {
+  /* tablet view */
+  .about-me {
+    max-width: 600px;
+    margin: auto;
+  }
+
   /* undo horizontal margins for desktop view */
   .about-me-text {
     margin: 20px 0;

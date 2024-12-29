@@ -3,12 +3,7 @@
     height: 200px;
     width: 100%;
     object-fit: cover;
-    margin: 10px 0 20px;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .screensaver {
-    height: 400px;
+    margin: 10px auto 20px;
+    max-width: 600px;
   }
 }
