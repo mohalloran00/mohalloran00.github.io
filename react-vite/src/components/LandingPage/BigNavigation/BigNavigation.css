@@ -13,6 +13,7 @@
     width: 300px;
     margin: auto;
     border-radius: 5px;
+    display: block;
   }
 
   .big-navbox:hover {
@@ -43,8 +44,25 @@
 
   .big-navbox {
     height: 100%;
+    width: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .big-nav {
+    max-width: 1100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .big-navbox {
+    display: block;
+  }
+
+  .bnb-icon {
+    margin: 10px 0;
   }
 }
