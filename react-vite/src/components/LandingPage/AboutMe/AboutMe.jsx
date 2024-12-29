@@ -1,5 +1,4 @@
 import data from '../../../data';
-import MyFace from './MyFace.jsx';
 import './AboutMe.css';
 
 export default function AboutMe() {
@@ -11,7 +10,7 @@ export default function AboutMe() {
           <p key={i}>{paragraph}</p>
         ))}
       </div>
-      <MyFace />
+      <img className='my-face' src='molly.jpg' />
     </div>
   );
 }
