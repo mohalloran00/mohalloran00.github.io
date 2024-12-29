@@ -12,9 +12,21 @@ const router = createBrowserRouter([
       },
       {
         path: '/research',
-        element: <h1>Research</h1>,
+        element: <h1>Page Under Construction</h1>,
       },
-      { path: '/:pagename', element: <h1>placeholder</h1> },
+      {
+        path: '/outreach',
+        element: <h1>Page Under Construction</h1>,
+      },
+      {
+        path: '/mentoring',
+        element: <h1>Page Under Construction</h1>,
+      },
+      {
+        path: '/contact',
+        element: <h1>Page Under Construction</h1>,
+      },
+      { path: '/:pagename', element: <h1>Page Not Found</h1> },
     ],
   },
 ]);
