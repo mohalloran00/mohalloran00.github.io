@@ -1,3 +1,22 @@
-.about-me {
-  margin: 20px 10px;
+@import url(../../../css-global/vars.css);
+
+@media screen {
+  /* horizontal margins only for mobile view */
+  .about-me-text {
+    margin: 20px 10px;
+  }
+
+  /* border is specifically to make this pic look better with this background 
+  if the pic changes or the background color changes, remove it */
+  .my-face {
+    border-top: 1px dotted var(--rock);
+    border-right: 1px dotted var(--rock);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* undo horizontal margins for desktop view */
+  .about-me-text {
+    margin: 20px 0;
+  }
 }
