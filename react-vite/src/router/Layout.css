@@ -1,0 +1,32 @@
+@import url(../css-global/vars.css);
+
+@media screen {
+  /* container for navigation bar */
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--rock);
+    padding: 5px 7px;
+    margin-bottom: 10px;
+  }
+
+  /* container for site name */
+  #navbar > div:first-child {
+    font-weight: bold;
+  }
+
+  /* container for navigation links */
+  #navbar > div:last-child {
+    display: flex;
+    gap: 5px;
+  }
+
+  /* navigation links */
+  #navbar > div:last-child a {
+    font-size: 0.9em;
+  }
+
+  #navbar a.active {
+    font-weight: bold;
+  }
+}
