@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Fade from '../../Fade';
 import data from '../../../data';
 import './Screensavers.css';
 
@@ -13,5 +14,19 @@ export default function Screensavers() {
     return () => clearInterval(interval);
   }, [cyclingImages]);
 
-  return <img className='screensaver' src={cyclingImages[imageIndex]} />;
+  return (
+    <div className='screensaver'>
+      {cyclingImages.map((url, i) => {
+        const content = <img className='screensaver-image' src={url} />;
+        return (
+          <Fade
+            key={i}
+            content={content}
+            in={i === imageIndex}
+            duration={1000}
+          />
+        );
+      })}
+    </div>
+  );
 }
