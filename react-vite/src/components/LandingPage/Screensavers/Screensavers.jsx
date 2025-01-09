@@ -4,23 +4,38 @@ import './Screensavers.css';
 
 export default function Screensavers() {
   const { cyclingImages } = data;
+
   const [imageIndex, setImageIndex] = useState(0);
+  const [fadeImageIndex, setFadeImageIndex] = useState(null);
+
   useEffect(() => {
-    const interval = setInterval(
-      () => setImageIndex(prev => (prev + 1) % cyclingImages.length),
-      10_000
-    );
+    const interval = setInterval(() => {
+      setFadeImageIndex(imageIndex);
+      setTimeout(() => {
+        setImageIndex(prev => (prev + 1) % cyclingImages.length);
+        setFadeImageIndex(null);
+      }, 1_000);
+    }, 10_000);
+
     return () => clearInterval(interval);
-  }, [cyclingImages]);
+  }, [imageIndex, cyclingImages]);
 
   return (
     <div className='screensaver'>
-      {cyclingImages.map((url, i) => {
-        let className = 'ss-image';
-        if (imageIndex === i) className += ' ssi-current';
-        else className += ' ssi-hidden';
-        return <img className={className} key={url} src={url} />;
-      })}
+      <img
+        key={imageIndex}
+        className='screensaver-image fade-in'
+        src={cyclingImages[imageIndex]}
+        alt='current'
+      />
+      {fadeImageIndex !== null && (
+        <img
+          key={fadeImageIndex}
+          className='screensaver-image fade-out'
+          src={cyclingImages[fadeImageIndex]}
+          alt='fading'
+        />
+      )}
     </div>
   );
 }
