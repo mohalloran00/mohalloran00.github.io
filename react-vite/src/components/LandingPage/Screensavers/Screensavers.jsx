@@ -13,5 +13,14 @@ export default function Screensavers() {
     return () => clearInterval(interval);
   }, [cyclingImages]);
 
-  return <img className='screensaver' src={cyclingImages[imageIndex]} />;
+  return (
+    <div className='screensaver'>
+      {cyclingImages.map((url, i) => {
+        let className = 'ss-image';
+        if (imageIndex === i) className += ' ssi-current';
+        else className += ' ssi-hidden';
+        return <img className={className} key={url} src={url} />;
+      })}
+    </div>
+  );
 }

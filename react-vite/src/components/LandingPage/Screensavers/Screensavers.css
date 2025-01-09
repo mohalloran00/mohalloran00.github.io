@@ -7,18 +7,37 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media screen {
   .screensaver {
     height: 200px;
     width: 100%;
-    object-fit: cover;
     margin: 10px auto 20px;
     max-width: 600px;
-    animation: 1s fadeOut infinite ease-in-out;
+    position: relative;
   }
 
-  .pause-ss {
-    animation-play-state: paused;
+  .ss-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .ssi-hidden {
+    opacity: 0;
+  }
+
+  .ssi-current {
+    animation: 1s fadeOut infinite ease-in-out;
   }
 }
 
