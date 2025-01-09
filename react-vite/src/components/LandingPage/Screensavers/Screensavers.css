@@ -2,9 +2,22 @@
   .screensaver {
     height: 200px;
     width: 100%;
-    object-fit: cover;
     margin: 10px auto 20px;
     max-width: 600px;
+    position: relative;
+  }
+
+  .screensaver > div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .screensaver-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
