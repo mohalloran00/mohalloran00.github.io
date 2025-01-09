@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import LandingPage from '../components/LandingPage';
 import Layout from './Layout';
+import Sandbox from '../components/Sandbox/Sandbox';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: '/research',
         element: <h1>Page Under Construction</h1>,
+      },
+      {
+        path: '/sandbox',
+        element: <Sandbox />,
       },
       {
         path: '/outreach',
