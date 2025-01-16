@@ -9,11 +9,11 @@ const recursivelyRemove = function (folderPath) {
   files.forEach(file => {
     const filePath = path.resolve(folderPath, file);
     if (notDist.includes(filePath)) return;
+
     if (fs.statSync(filePath).isFile()) {
       fs.unlinkSync(filePath);
       console.log(`Successfully deleted ${filePath}.`);
-    }
-    if (fs.statSync(filePath).isDirectory()) {
+    } else if (fs.statSync(filePath).isDirectory()) {
       recursivelyRemove(filePath);
     }
   });
