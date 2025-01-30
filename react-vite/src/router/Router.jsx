@@ -1,6 +1,7 @@
 import { createHashRouter } from 'react-router-dom';
 import LandingPage from '../components/LandingPage';
 import Layout from './Layout';
+import Outreach from '../components/Outreach';
 
 const router = createHashRouter([
   {
@@ -16,7 +17,7 @@ const router = createHashRouter([
       },
       {
         path: '/outreach',
-        element: <h1>Page Under Construction</h1>,
+        element: <Outreach />,
       },
       {
         path: '/mentoring',
