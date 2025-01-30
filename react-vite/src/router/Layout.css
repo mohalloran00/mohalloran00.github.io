@@ -29,4 +29,9 @@
   #navbar a.active {
     font-weight: bold;
   }
+
+  #page {
+    max-width: 1100px;
+    margin: auto;
+  }
 }

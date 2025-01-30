@@ -1,3 +1,9 @@
+import './Outreach.css';
+
 export default function Outreach() {
-  return <h1>Stewardship Day at Nine Mile Canyon</h1>;
+  return (
+    <div className='outreach'>
+      <h1 className='center'>Stewardship Day at Nine Mile Canyon</h1>
+    </div>
+  );
 }

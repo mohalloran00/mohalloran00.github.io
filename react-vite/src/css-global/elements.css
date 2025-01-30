@@ -16,3 +16,7 @@ a:hover {
   color: var(--water);
   cursor: pointer;
 }
+
+.center {
+  text-align: center;
+}
