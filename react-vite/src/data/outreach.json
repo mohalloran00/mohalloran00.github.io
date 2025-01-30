@@ -5,7 +5,13 @@
         "Commodo hendrerit curae lacinia consequat imperdiet metus. Bibendum mus sit aenean venenatis ac eros bibendum ex. Sollicitudin ultrices habitasse feugiat nisi lectus montes fames nostra turpis. Elementum duis ornare nam; etiam adipiscing tincidunt ad lectus. Efficitur consequat conubia mus finibus ex. Purus sed pulvinar dui lorem nascetur consectetur curabitur leo. Semper iaculis vivamus, inceptos duis scelerisque amet vestibulum amet."
     ],
     "images": [
-        "outreach1.jpg",
-        "outreach2.jpg"
+        {
+            "src": "outreach1.jpg",
+            "caption": "Egestas gravida pulvinar aenean pretium quis class magnis aenean."
+        },
+        {
+            "src": "outreach2.jpg",
+            "caption": "Vestibulum porta efficitur gravida arcu fermentum pulvinar pulvinar curae tempor. Ex quisque aptent lacus curabitur ante nisl?"
+        }
     ]
 }
