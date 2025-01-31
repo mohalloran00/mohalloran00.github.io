@@ -12,7 +12,21 @@ p:last-of-type {
   margin-bottom: 0;
 }
 
+h1 {
+  margin-bottom: 10px;
+}
+
 a:hover {
   color: var(--water);
   cursor: pointer;
+}
+
+figcaption {
+  color: var(--darkgray);
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.center {
+  text-align: center;
 }

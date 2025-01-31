@@ -47,7 +47,9 @@ ul,
 ol,
 li,
 button,
-body {
+body,
+figure,
+figcaption {
   margin: 0;
   border: 0;
   padding: 0;

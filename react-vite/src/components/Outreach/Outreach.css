@@ -1,0 +1,44 @@
+@import url(../../css-global/vars.css);
+
+@media screen {
+  .outreach {
+    padding: 0 10px 10px;
+  }
+
+  .outreach-fig {
+    border: 1px dashed var(--rock);
+    padding: 5px;
+    margin-bottom: 10px;
+    height: fit-content;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .outreach-figs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .outreach {
+    padding: 0 0 10px;
+  }
+
+  .outreach-content {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-areas: 'outreach-text outreach-images';
+    column-gap: 20px;
+  }
+
+  .outreach-figs {
+    grid-area: outreach-images;
+    grid-template-columns: 1fr;
+  }
+
+  .outreach-text {
+    grid-area: outreach-text;
+  }
+}
