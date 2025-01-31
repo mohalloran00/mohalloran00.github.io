@@ -21,6 +21,12 @@ a:hover {
   cursor: pointer;
 }
 
+figcaption {
+  color: var(--darkgray);
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
 .center {
   text-align: center;
 }
