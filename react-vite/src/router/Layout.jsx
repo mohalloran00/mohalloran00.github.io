@@ -1,6 +1,7 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import data from '../data';
 import './Layout.css';
+import DropdownMenu from '../components/DropdownMenu/';
 
 export default function Layout() {
   const { navigation } = data;
@@ -19,24 +20,23 @@ export default function Layout() {
                 </NavLink>
               );
             } else {
+              const anchor = <p>{name}</p>;
+              const menuItems = subpages.map(({ URL, name, file }, i) => {
+                if (file)
+                  return (
+                    <Link to={URL} key={i}>
+                      {name}
+                    </Link>
+                  );
+                else
+                  return (
+                    <NavLink to={URL} key={i}>
+                      {name}
+                    </NavLink>
+                  );
+              });
               return (
-                <p key={i}>
-                  {name}:{' '}
-                  {subpages.map(({ URL, name, file }, i) => {
-                    if (file)
-                      return (
-                        <Link to={URL} key={i}>
-                          {name}
-                        </Link>
-                      );
-                    else
-                      return (
-                        <NavLink to={URL} key={i}>
-                          {name}
-                        </NavLink>
-                      );
-                  })}
-                </p>
+                <DropdownMenu key={i} anchor={anchor} menuItems={menuItems} />
               );
             }
           })}
