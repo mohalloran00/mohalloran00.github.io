@@ -22,18 +22,14 @@ export default function Layout() {
             } else {
               const anchor = <p>{name}</p>;
               const menuItems = subpages.map(({ URL, name, file }, i) => {
-                if (file)
-                  return (
-                    <Link to={URL} key={i}>
-                      {name}
-                    </Link>
-                  );
-                else
-                  return (
-                    <NavLink to={URL} key={i}>
-                      {name}
-                    </NavLink>
-                  );
+                const content = file ? (
+                  <Link to={URL}>{name}</Link>
+                ) : (
+                  <NavLink to={URL} key={i}>
+                    {name}
+                  </NavLink>
+                );
+                return { content, id: i };
               });
               return (
                 <DropdownMenu key={i} anchor={anchor} menuItems={menuItems} />

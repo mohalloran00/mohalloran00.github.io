@@ -1,4 +1,5 @@
 export default function DropdownMenu({ anchor, menuItems }) {
+  console.log({ menuItems });
   return (
     <>
       {anchor}
