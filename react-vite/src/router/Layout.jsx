@@ -11,11 +11,35 @@ export default function Layout() {
           <Link to='/'>Molly O’Halloran</Link>
         </div>
         <div>
-          {navigation.map(({ name, URL }, i) => (
-            <NavLink to={URL} key={i}>
-              {name}
-            </NavLink>
-          ))}
+          {navigation.map(({ name, URL, subpages }, i) => {
+            if (!subpages) {
+              return (
+                <NavLink to={URL} key={i}>
+                  {name}
+                </NavLink>
+              );
+            } else {
+              return (
+                <p key={i}>
+                  {name}:{' '}
+                  {subpages.map(({ URL, name, file }, i) => {
+                    if (file)
+                      return (
+                        <Link to={URL} key={i}>
+                          {name}
+                        </Link>
+                      );
+                    else
+                      return (
+                        <NavLink to={URL} key={i}>
+                          {name}
+                        </NavLink>
+                      );
+                  })}
+                </p>
+              );
+            }
+          })}
         </div>
       </div>
       <main id='page'>

@@ -12,6 +12,21 @@ const navigation = [
     icon: faMicroscope,
     blurb:
       'Faucibus interdum nostra netus pellentesque lorem. Laoreet vulputate bibendum dignissim tellus mus; pharetra porta maecenas.',
+    subpages: [
+      {
+        name: 'Current Projects',
+        URL: '/research/current',
+      },
+      {
+        name: 'Publications',
+        URL: '/research/publications',
+      },
+      {
+        name: 'CV',
+        file: true,
+        URL: 'https://mohalloran00.github.io/cv.pdf',
+      },
+    ],
   },
   {
     name: 'Outreach',
