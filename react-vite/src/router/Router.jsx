@@ -2,6 +2,7 @@ import { createHashRouter } from 'react-router-dom';
 import LandingPage from '../components/LandingPage';
 import Layout from './Layout';
 import Outreach from '../components/Outreach';
+import Publications from '../components/Publications';
 
 const router = createHashRouter([
   {
@@ -14,6 +15,10 @@ const router = createHashRouter([
       {
         path: '/research',
         element: <h1>Page Under Construction</h1>,
+      },
+      {
+        path: '/research/publications',
+        element: <Publications />,
       },
       {
         path: '/outreach',
